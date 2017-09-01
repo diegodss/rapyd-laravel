@@ -44,16 +44,21 @@
             </tbody>
         </table>
     </div>
-
-    <div class="btn-toolbar" role="toolbar">
-        @if ($dg->havePagination())
-            <div class="pull-left">
+</div>
+<div class="btn-toolbar-no" role="toolbar">
+    @if ($dg->havePagination())
+    <div class="row">
+        <div class="col-xs-6">
+        <div class="pull-left">
                 {!! $dg->links() !!}
             </div>
-            <div class="pull-right rpd-total-rows">
-                {!! $dg->totalRows() !!}
+        </div>
+        <div class="col-xs-6">
+            <div class="pull-right  rpd-total-rows">
+                <span class="btn btn-default  disabled">Total: {!! $dg->totalRows() !!}</span>
             </div>
-        @endif
+        </div>
     </div>
+    @endif
 </div>
 
